@@ -61,8 +61,71 @@ namespace FortuneTeller_ProjectOne
                 retireYears = 100;
             }
 
+            string transportation;
+
+            if (favoriteColor.Equals("Red", StringComparison.CurrentCultureIgnoreCase))
+            {
+                transportation = "Car";
+            }
+            else if (favoriteColor.Equals("Orange", StringComparison.CurrentCultureIgnoreCase))
+            {
+                transportation = "Boat";
+            }
+            else if (favoriteColor.Equals("Yellow", StringComparison.CurrentCultureIgnoreCase))
+            {
+                transportation = "Plane";
+            }
+            else if (favoriteColor.Equals("Green", StringComparison.CurrentCultureIgnoreCase))
+            {
+                transportation = "Train";
+            }
+            else if (favoriteColor.Equals("Blue", StringComparison.CurrentCultureIgnoreCase))
+
+            {
+                transportation = "Motorcycle";
+            }
+            else if (favoriteColor.Equals("Indigo", StringComparison.CurrentCultureIgnoreCase))
+
+            {
+                transportation = "Bicycle";
+            }
+            else if (favoriteColor.Equals("Violet", StringComparison.CurrentCultureIgnoreCase))
+
+            {
+                transportation = "Horse";
+            }
+            else
+            {
+                transportation = "Nothing";
+            }
+            //depending on what their favorite color is, they are assigned a mode of transportation in the variable. 
+
+            float bankAccount;
+
+            if (birthMonth < 01)
+            {
+                bankAccount = 0.00f;
+            }
+            else if (birthMonth >= 1 && birthMonth <= 4)
+            {
+                bankAccount = 4000f;
+            }
+            else if (birthMonth >= 5 && birthMonth <=8)
+            {
+                bankAccount = 1.50f;
+            }
+            else if (birthMonth >= 9 && birthMonth <= 12)
+            {
+                bankAccount = 100000f;
+            }
+            else
+            {
+                bankAccount = 0.00f;
+            }
+            //bankAccount is used to determine how much money a person will have in their bank account based on their birth month
                 //Part Three 
-                Console.WriteLine(firstName + " " + lastName + " will retire in " + retireYears);
+                Console.WriteLine(firstName + " " + lastName + " will retire in " + retireYears + " years with $" + bankAccount + " and a " + transportation + ".");
         }
+
     }
 }

@@ -46,7 +46,7 @@ namespace FortuneTeller_ProjectOne
 
             Console.WriteLine("Finally, please enter the number of siblings you have.");
             int number_of_siblings = int.Parse(Console.ReadLine());
-            Console.WriteLine("You have entered: " + number_of_siblings + " as the number of siblings you have.");
+            Console.WriteLine("You have entered " + number_of_siblings + " as the number of siblings you have.");
             //user enters the number of siblings they have. Part One complete
 
             //variables to remember: firstName, lastName, usersAge, birthMonth, favoriteColor, number_of_siblings
@@ -60,6 +60,31 @@ namespace FortuneTeller_ProjectOne
             {
                 retireYears = 100;
             }
+
+            //when user will retire based on age being even or odd
+
+            string vacationHome; 
+            if (number_of_siblings < 0)
+            {
+                vacationHome = "The inlaws house";
+            } 
+            else if(number_of_siblings == 1)
+            {
+                vacationHome = "Cap Code";
+            }
+            else if(number_of_siblings== 2)
+            {
+                vacationHome = "Disney World";
+            }
+            else if(number_of_siblings == 3)
+            {
+                vacationHome = "Las Vegas";
+            }
+            else
+            {
+                vacationHome = "Thailand";
+            }
+            //vacation home based on number of siblings
 
             string transportation;
 
@@ -123,8 +148,9 @@ namespace FortuneTeller_ProjectOne
                 bankAccount = 0.00f;
             }
             //bankAccount is used to determine how much money a person will have in their bank account based on their birth month
-                //Part Three 
-                Console.WriteLine(firstName + " " + lastName + " will retire in " + retireYears + " years with $" + bankAccount + " and a " + transportation + ".");
+
+                //Part Three: Fortune
+                Console.WriteLine("Here is your Fortune: " + firstName + " " + lastName + " will retire in " + retireYears + " years with $" + bankAccount + " in the bank,\na vacation home in " + vacationHome + " and a " + transportation + ".");
         }
 
     }

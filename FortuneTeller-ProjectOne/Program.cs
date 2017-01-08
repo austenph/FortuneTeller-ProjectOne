@@ -49,6 +49,20 @@ namespace FortuneTeller_ProjectOne
             Console.WriteLine("You have entered: " + number_of_siblings + " as the number of siblings you have.");
             //user enters the number of siblings they have. Part One complete
 
+            //variables to remember: firstName, lastName, usersAge, birthMonth, favoriteColor, number_of_siblings
+
+            int retireYears = 0;
+            if (usersAge % 2 == 0) 
+            {
+                retireYears = 50; //even number
+            }
+            else
+            {
+                retireYears = 100;
+            }
+
+                //Part Three 
+                Console.WriteLine(firstName + " " + lastName + " will retire in " + retireYears);
         }
     }
 }

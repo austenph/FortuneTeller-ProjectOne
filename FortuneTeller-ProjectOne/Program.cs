@@ -12,11 +12,21 @@ namespace FortuneTeller_ProjectOne
         {
             //part one of my program will ask a user a series of questions
 
-            Console.WriteLine("Hello, Welcome to Fortune Teller. Please enter your first name to get started.");
+            Console.WriteLine("Hello, Welcome to Fortune Teller.\n**If you wish to leave just enter \"Quit\" at any time.\nPlease enter your first name to get started.");
             string firstName = Console.ReadLine();
+            if(firstName.Equals("Quit", StringComparison.CurrentCultureIgnoreCase))
+            {
+                Console.WriteLine("Nobody likes a quitter...");
+                Environment.Exit(0);
+            }
 
             Console.WriteLine("Thanks " + firstName + "! Now please enter your last name.");
             string lastName = Console.ReadLine();
+            if (lastName.Equals("Quit", StringComparison.CurrentCultureIgnoreCase))
+            {
+                Console.WriteLine("Nobody likes a quitter...");
+                Environment.Exit(0);
+            }
             //just got users first and last name enter 
 
             Console.WriteLine("Okay " + firstName + " " + lastName + ". Now please enter your age.");
@@ -28,19 +38,19 @@ namespace FortuneTeller_ProjectOne
             //users birth month as an integer
 
             Console.WriteLine("Okay " + firstName + " " + lastName + ". You are " + usersAge + " and were born in month number " + birthMonth 
-                + ". \nNow, please enter your favorite ROYGBIV color.\nIf you do not know what ROYGBIV is, then enter \"Help.\"");
+                + ". \nNow, please enter your favorite ROYGBIV color (spell it out).\nIf you do not know what ROYGBIV is, then enter \"Help.\"");
 
             string favoriteColor = Console.ReadLine();
 
             if (favoriteColor == "Help")
             {
-                    Console.WriteLine("Red, Orange, Yellow, Green, Blue, Indigo, Violet is what ROYGBIV stands for.\nNow enter which color is your favorite.");
+                    Console.WriteLine("ROYGBIV stands for: Red, Orange, Yellow, Green, Blue, Indigo, Violet.\nNow enter which color is your favorite (spell it out).");
                     favoriteColor = Console.ReadLine();
                     Console.WriteLine(favoriteColor + " is your favorite color.");
             }
             else
             {
-                Console.WriteLine("You have enter: " + favoriteColor + " as your favorite color");
+                Console.WriteLine("You have enter " + favoriteColor + " as your favorite color");
             }
             //if else statement used to determine users favorite ROYGBIV color
 
@@ -150,7 +160,7 @@ namespace FortuneTeller_ProjectOne
             //bankAccount is used to determine how much money a person will have in their bank account based on their birth month
 
                 //Part Three: Fortune
-                Console.WriteLine("Here is your Fortune: " + firstName + " " + lastName + " will retire in " + retireYears + " years with $" + bankAccount + " in the bank,\na vacation home in " + vacationHome + " and a " + transportation + ".");
+                Console.WriteLine("Here is your Fortune:\n\n" + firstName + " " + lastName + " will retire in " + retireYears + " years with $" + bankAccount + " in the bank,\na vacation home in " + vacationHome + " and a " + transportation + ".");
         }
 
     }

@@ -1,1 +1,6 @@
 c:\users\wecancodeit\documents\visual studio 2015\Projects\FortuneTeller-ProjectOne\FortuneTeller-ProjectOne\bin\Debug\FortuneTeller-ProjectOne.exe.config
+c:\users\wecancodeit\documents\visual studio 2015\Projects\FortuneTeller-ProjectOne\FortuneTeller-ProjectOne\bin\Debug\FortuneTeller-ProjectOne.exe
+c:\users\wecancodeit\documents\visual studio 2015\Projects\FortuneTeller-ProjectOne\FortuneTeller-ProjectOne\bin\Debug\FortuneTeller-ProjectOne.pdb
+c:\users\wecancodeit\documents\visual studio 2015\Projects\FortuneTeller-ProjectOne\FortuneTeller-ProjectOne\obj\Debug\FortuneTeller-ProjectOne.csprojResolveAssemblyReference.cache
+c:\users\wecancodeit\documents\visual studio 2015\Projects\FortuneTeller-ProjectOne\FortuneTeller-ProjectOne\obj\Debug\FortuneTeller-ProjectOne.exe
+c:\users\wecancodeit\documents\visual studio 2015\Projects\FortuneTeller-ProjectOne\FortuneTeller-ProjectOne\obj\Debug\FortuneTeller-ProjectOne.pdb

@@ -12,21 +12,12 @@ namespace FortuneTeller_ProjectOne
         {
             //part one of my program will ask a user a series of questions
 
-            Console.WriteLine("Hello, Welcome to Fortune Teller.\n**If you wish to leave just enter \"Quit\" at any time.\nPlease enter your first name to get started.");
+            Console.WriteLine("Hello, Welcome to Fortune Teller.\nPlease enter your first name to get started.");
             string firstName = Console.ReadLine();
-            if(firstName.Equals("Quit", StringComparison.CurrentCultureIgnoreCase))
-            {
-                Console.WriteLine("Nobody likes a quitter...");
-                Environment.Exit(0);
-            }
-
+          
             Console.WriteLine("Thanks " + firstName + "! Now please enter your last name.");
             string lastName = Console.ReadLine();
-            if (lastName.Equals("Quit", StringComparison.CurrentCultureIgnoreCase))
-            {
-                Console.WriteLine("Nobody likes a quitter...");
-                Environment.Exit(0);
-            }
+      
             //just got users first and last name enter 
 
             Console.WriteLine("Okay " + firstName + " " + lastName + ". Now please enter your age.");
@@ -42,7 +33,7 @@ namespace FortuneTeller_ProjectOne
 
             string favoriteColor = Console.ReadLine();
 
-            if (favoriteColor == "Help")
+            if (favoriteColor.Equals("Help", StringComparison.CurrentCultureIgnoreCase))
             {
                     Console.WriteLine("ROYGBIV stands for: Red, Orange, Yellow, Green, Blue, Indigo, Violet.\nNow enter which color is your favorite (spell it out).");
                     favoriteColor = Console.ReadLine();
@@ -54,12 +45,12 @@ namespace FortuneTeller_ProjectOne
             }
             //if else statement used to determine users favorite ROYGBIV color
 
-            Console.WriteLine("Finally, please enter the number of siblings you have.");
+            Console.WriteLine("Finally, please enter the number of siblings you have (as digit).");
             int number_of_siblings = int.Parse(Console.ReadLine());
             Console.WriteLine("You have entered " + number_of_siblings + " as the number of siblings you have.");
             //user enters the number of siblings they have. Part One complete
 
-            //variables to remember: firstName, lastName, usersAge, birthMonth, favoriteColor, number_of_siblings
+            // Part 2: variables to remember: firstName, lastName, usersAge, birthMonth, favoriteColor, number_of_siblings
 
             int retireYears = 0;
             if (usersAge % 2 == 0) 
@@ -78,6 +69,10 @@ namespace FortuneTeller_ProjectOne
             {
                 vacationHome = "The inlaws house";
             } 
+            else if(number_of_siblings == 0)
+            {
+                vacationHome = "Germany";
+            }
             else if(number_of_siblings == 1)
             {
                 vacationHome = "Cap Code";
@@ -97,7 +92,6 @@ namespace FortuneTeller_ProjectOne
             //vacation home based on number of siblings
 
             string transportation;
-
             if (favoriteColor.Equals("Red", StringComparison.CurrentCultureIgnoreCase))
             {
                 transportation = "Car";
